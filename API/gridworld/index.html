@@ -457,10 +457,10 @@ If method is ‘custom’, then kwargs[“pos”] is a list of coordination.</p>
 </dd>
 </dl>
 <p class="rubric">Example</p>
-<p># add 1000 walls randomly
-&gt;&gt;&gt; env.add_agents(handle, method=”random”, n=1000)</p>
-<p># add 3 agents to (1,2), (4,5) and (9, 8) in map
-&gt;&gt;&gt; env.add_agents(handle, method=”custom”, pos=[(1,2), (4,5), (9,8)])</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">env</span><span class="o">.</span><span class="n">add_agents</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;random&quot;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>                    <span class="c1"># add 1000 walls randomly</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">env</span><span class="o">.</span><span class="n">add_agents</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;custom&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">[(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">)])</span> <span class="c1"># add 3 agents to (1,2), (4,5) and (9, 8) in map</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py function">
