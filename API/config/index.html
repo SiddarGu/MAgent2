@@ -288,15 +288,17 @@
 <dd><p>Set parameters of global configuration.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>args</strong> (<em>dict</em>) – <p>Key-value pairs containing the following configuration attributes</p>
-<p>map_width (int): Number of horizontal grid squares in the Gridworld.
-map_height (int): Number of vertical grid squares in the Gridworld.
-embedding_size (int): Embedding size for the observation features.
-render_dir (str): Directory to save render file.
-seed (int): Random seed.
-food_mode (bool): Dead agents drop food on the map.
-turn_mode (bool): Include 2 more actions – turn left and turn right.
-minimap_mode (bool): Include minimap in observations.</p>
+<dd class="field-odd"><p><strong>args</strong> (<em>dict</em>) – <p>Key-value pairs containing the following configuration attributes.</p>
+<ul class="simple">
+<li><p><strong>map_width</strong> (<em>int</em>): Number of horizontal grid squares in the Gridworld.</p></li>
+<li><p><strong>map_height</strong> (<em>int</em>): Number of vertical grid squares in the Gridworld.</p></li>
+<li><p><strong>embedding_size</strong> (<em>int</em>): Embedding size for the observation features.</p></li>
+<li><p><strong>render_dir</strong> (<em>str</em>): Directory to save render file.</p></li>
+<li><p><strong>seed</strong> (<em>int</em>): Random seed.</p></li>
+<li><p><strong>food_mode</strong> (<em>bool</em>): Dead agents drop food on the map.</p></li>
+<li><p><strong>turn_mode</strong> (<em>bool</em>): Include 2 more actions – turn left and turn right.</p></li>
+<li><p><strong>minimap_mode</strong> (<em>bool</em>): Include minimap in observations.</p></li>
+</ul>
 </p>
 </dd>
 </dl>
@@ -310,20 +312,20 @@ minimap_mode (bool): Include minimap in observations.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – Name of the type (should be unique).</p></li>
-<li><p><strong>attr</strong> (<em>dict</em>) – <p>Key-value pairs containing the following configuration attributes:</p>
+<li><p><strong>attr</strong> (<em>dict</em>) – <p>Key-value pairs containing the following configuration attributes.
+- <strong>height</strong> (<em>int</em>):   Height of agent body.
+- <strong>width</strong> (<em>int</em>):    Width of agent body.
+- <strong>speed</strong> (<em>float</em>):  Maximum speed, i.e. the radius of move circle of the agent.
+- <strong>hp</strong> (<em>float</em>):    Maximum health point of the agent.
+- <strong>view_range</strong> (<em>gw.CircleRange</em> or <em>gw.SectorRange</em>): Field of view of the agent.</p>
 <ul>
-<li><p>height (int):   Height of agent body.</p></li>
-<li><p>width (int):    Width of agent body.</p></li>
-<li><p>speed (float):  Maximum speed, i.e. the radius of move circle of the agent.</p></li>
-<li><p>hp: (float):    Maximum health point of the agent.</p></li>
-<li><p>view_range (gw.CircleRange or gw.SectorRange): Field of view of the agent.</p></li>
-<li><p>damage (float):         Attack damage.</p></li>
-<li><p>step_recover (float):   Step recover (healing) of health points (can be negative).</p></li>
-<li><p>kill_supply (float):    Hp gain for killing this type of agent.</p></li>
-<li><p>step_reward (float):    Reward gained in every step.</p></li>
-<li><p>kill_reward (float):    Reward gained for killing this type of agent.</p></li>
-<li><p>dead_penalty (float):   Reward gained for dying.</p></li>
-<li><p>attack_penalty (float): Reward gained when performing an attack (to discourage attacking empty grid cells).</p></li>
+<li><p><strong>damage</strong> (<em>float</em>):         Attack damage.</p></li>
+<li><p><strong>step_recover</strong> (<em>float</em>):   Step recover (healing) of health points (can be negative).</p></li>
+<li><p><strong>kill_supply</strong> (<em>float</em>):    Hp gain for killing this type of agent.</p></li>
+<li><p><strong>step_reward</strong> (<em>float</em>):    Reward gained in every step.</p></li>
+<li><p><strong>kill_reward</strong> (<em>float</em>):    Reward gained for killing this type of agent.</p></li>
+<li><p><strong>dead_penalty</strong> (<em>float</em>):   Reward gained for dying.</p></li>
+<li><p><strong>attack_penalty</strong> (<em>float</em>): Reward gained when performing an attack (to discourage attacking empty grid cells).</p></li>
 </ul>
 </p></li>
 </ul>
