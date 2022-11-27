@@ -290,8 +290,11 @@
 <dd><p>Set parameters of global configuration.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>args</strong> (<em>*</em>) – <p>Contains the following configuration attributes:</p>
-<ul class="simple">
+<dd class="field-odd"><p><strong>args</strong> (<em>dict</em>) – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Contains the following configuration attributes:</dt><dd><ul class="simple">
 <li><p><strong>map_width</strong> (<em>int</em>): Number of horizontal grid squares in the Gridworld.</p></li>
 <li><p><strong>map_height</strong> (<em>int</em>): Number of vertical grid squares in the Gridworld.</p></li>
 <li><p><strong>embedding_size</strong> (<em>int</em>): Embedding size for the observation features.</p></li>
@@ -301,7 +304,6 @@
 <li><p><strong>turn_mode</strong> (<em>bool</em>): Include 2 more actions – turn left and turn right.</p></li>
 <li><p><strong>minimap_mode</strong> (<em>bool</em>): Include minimap in observations.</p></li>
 </ul>
-</p>
 </dd>
 </dl>
 </dd></dl>
@@ -314,8 +316,12 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – Name of the type (should be unique).</p></li>
-<li><p><strong>attr</strong> (<em>dict</em>) – <p>Contains the following configuration attributes:</p>
-<ul>
+<li><p><strong>attr</strong> (<em>dict</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Contains the following configuration attributes:</dt><dd><ul class="simple">
 <li><p><strong>height</strong> (<em>int</em>):   Height of agent body.</p></li>
 <li><p><strong>width</strong> (<em>int</em>):    Width of agent body.</p></li>
 <li><p><strong>speed</strong> (<em>float</em>):  Maximum speed, i.e. the radius of move circle of the agent.</p></li>
@@ -329,12 +335,13 @@
 <li><p><strong>dead_penalty</strong> (<em>float</em>):   Reward gained for dying.</p></li>
 <li><p><strong>attack_penalty</strong> (<em>float</em>): Reward gained when performing an attack (to discourage attacking empty grid cells).</p></li>
 </ul>
-</p></li>
-</ul>
 </dd>
 </dl>
-<p>:param : name (str): Name of the type.
-:type : Returns:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>name (str): Name of the type.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
