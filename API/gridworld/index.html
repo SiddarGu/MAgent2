@@ -278,7 +278,7 @@
 <h1>GridWorld<a class="headerlink" href="#gridworld" title="Permalink to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="magent2.gridworld.GridWorld">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">magent2.gridworld.</span></span><span class="sig-name descname"><span class="pre">GridWorld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../config/#magent2.gridworld.Config" title="magent2.gridworld.Config"><span class="pre">Config</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#magent2.gridworld.GridWorld" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">magent2.gridworld.</span></span><span class="sig-name descname"><span class="pre">GridWorld</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../../introduction/API/config/#magent2.gridworld.Config" title="magent2.gridworld.Config"><span class="pre">Config</span></a></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#magent2.gridworld.GridWorld" title="Permalink to this definition">#</a></dt>
 <dd><p>The main MAgent2 class for implementing environments. MAgent2 environments are square Gridworlds wherein each coordinate may contain an agent, a wall, or nothing.</p>
 <p>The class attributes are not accessible directly due to them living in the underlying C++ code.
 Thus, there are get/set methods for retrieving and manipulating their values.</p>
@@ -313,11 +313,12 @@ If method is ‘custom’, then kwargs[“pos”] is a list of coordination.</p>
 </ul>
 </dd>
 </dl>
-<p class="rubric">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">env</span><span class="o">.</span><span class="n">add_agents</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;random&quot;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>                    <span class="c1"># add 1000 walls randomly</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">env</span><span class="o">.</span><span class="n">add_agents</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;custom&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">[(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">)])</span> <span class="c1"># add 3 agents to (1,2), (4,5) and (9, 8) in map</span>
-</pre></div>
-</div>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a>`
+# add 1000 walls randomly
+&gt;&gt;&gt; env.add_agents(handle, method=”random”, n=1000)</p>
+<p># add 3 agents to (1,2), (4,5) and (9, 8) in map
+&gt;&gt;&gt; env.add_agents(handle, method=”custom”, pos=[(1,2), (4,5), (9,8)])
+<a href="#id3"><span class="problematic" id="id4">``</span></a><a href="#id5"><span class="problematic" id="id6">`</span></a></p>
 </dd></dl>
 
 <dl class="py function">
@@ -330,11 +331,12 @@ If method is ‘custom’, then kwargs[“pos”] is a list of coordination.</p>
 If method is ‘custom’, then kwargs[“pos”] is a list of coordination</p>
 </dd>
 </dl>
-<p class="rubric">Example</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">env</span><span class="o">.</span><span class="n">add_walls</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;random&quot;</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>                    <span class="c1"># add 1000 walls randomly</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">env</span><span class="o">.</span><span class="n">add_walls</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s2">&quot;custom&quot;</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">[(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">)])</span> <span class="c1"># add 3 walls to (1,2), (4,5) and (9, 8) in map</span>
-</pre></div>
-</div>
+<p><a href="#id7"><span class="problematic" id="id8">``</span></a>`
+# add 1000 walls randomly
+&gt;&gt;&gt; env.add_walls(method=”random”, n=1000)</p>
+<p># add 3 walls to (1,2), (4,5) and (9, 8) in map
+&gt;&gt;&gt; env.add_walls(method=”custom”, pos=[(1,2), (4,5), (9,8)])
+<a href="#id9"><span class="problematic" id="id10">``</span></a><a href="#id11"><span class="problematic" id="id12">`</span></a></p>
 </dd></dl>
 
 <dl class="py function">
